@@ -34,3 +34,8 @@ jobs:
       run: |
         echo "Running Selenium Test Iteration: ${{ matrix.iteration }}"
         mvn test
+    - name: Upload Screenshots
+      uses: actions/upload-artifact@v3
+      with:
+        name: selenium-screenshots
+        path: ./screenshots/
