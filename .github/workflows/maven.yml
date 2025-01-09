@@ -18,6 +18,9 @@ jobs:
   selenium:
 
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        iteration: [1,2,3,4,5,6,7,8,9,10]
 
     steps:
     - uses: actions/checkout@v4
@@ -29,4 +32,7 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: |
+        echo "Running Selenium Test Iteration: ${{ matrix.iteration }}"
+        mvn test
 
