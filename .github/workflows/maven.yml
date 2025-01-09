@@ -28,8 +28,6 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
     - name: Run Selenium Tests
       run: |
         echo "Running Selenium Test Iteration: ${{ matrix.iteration }}"
