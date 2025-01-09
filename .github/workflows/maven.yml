@@ -40,8 +40,8 @@ jobs:
       continue-on-error: true
 
     - name: Upload Screenshots
-      if: always()
       uses: actions/upload-artifact@v3
       with:
         name: selenium-screenshots-${{ matrix.iteration }}
-        path: ./screenshots/iteration-${{ matrix.iteration }}
+        path: ./screenshots/
+        if-no-files-found: warn

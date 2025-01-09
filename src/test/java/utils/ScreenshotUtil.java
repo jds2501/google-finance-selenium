@@ -11,6 +11,10 @@ public class ScreenshotUtil {
     public static void captureScreenshot(WebDriver driver, String screenshotName) {
         try {
             File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+            File screenshotsDir = new File("./screenshots");
+            if (!screenshotsDir.exists()) {
+                screenshotsDir.mkdirs();
+            }
             String filePath = "./screenshots/" + screenshotName + ".png";
             FileUtils.copyFile(srcFile, new File(filePath));
             System.out.println("Screenshot saved at: " + filePath);
