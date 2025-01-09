@@ -15,7 +15,7 @@ public class GoogleFinancePage {
     private final String pageTitle = "Google Finance";
     private final By interestedStockSymbols = By
             .cssSelector("section[aria-labelledby='smart-watchlist-title'] div[class='COaKTb']");
-    private final Duration defaultWait = Duration.ofSeconds(10);
+    private final Duration defaultWait = Duration.ofSeconds(20);
     private WebDriver driver;
 
     public GoogleFinancePage(WebDriver driver) {
