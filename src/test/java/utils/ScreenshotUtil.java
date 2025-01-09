@@ -7,7 +7,17 @@ import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * This class is a utility class that enables capturing screenshots on failures
+ */
 public class ScreenshotUtil {
+
+    /**
+     * Captures a screenshot using the provided WebDriver and screenshot file name.
+     * 
+     * @param driver         the Selenium web driver
+     * @param screenshotName the name of the file to use for the screenshot
+     */
     public static void captureScreenshot(WebDriver driver, String screenshotName) {
         try {
             File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);

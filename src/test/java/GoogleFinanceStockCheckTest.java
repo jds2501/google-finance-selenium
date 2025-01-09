@@ -19,6 +19,9 @@ import pageobjects.GoogleFinancePage;
 
 import static org.testng.Assert.assertTrue;
 
+/**
+ * This class checks stocks on the Google Finance page.
+ */
 public class GoogleFinanceStockCheckTest {
     private WebDriver driver;
 
@@ -69,7 +72,7 @@ public class GoogleFinanceStockCheckTest {
     }
 
     /**
-     * 
+     * Compares and prints interested vs. expected stock symbols on Google Finance
      */
     @Test
     public void checkInterestedStockSymbols() {
