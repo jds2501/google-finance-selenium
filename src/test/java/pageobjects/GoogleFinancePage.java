@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import test.java.utils.ScreenshotUtil;
+import utils.ScreenshotUtil;
 
 /**
  * This class is a page object representing google.com/finance
